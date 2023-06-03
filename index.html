@@ -1,44 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- BOOTSTRAPP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto+Condensed&family=Teko:wght@600&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto+Condensed&family=Teko:wght@600&display=swap"
+        rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="estilos.css">
     <title>PC LUX, Hardware al alcance de tu mano</title>
 </head>
+
 <body class="conteiner-fluid">
+    <div class="contenedorPrincipal">
+        <header class="encabezado">
+            <h1>PC LUX</h1>
+            <h2>Hardware al alcance de tu mano</h2>
+            <!-- NAVBAR BOOTSTRAP -->
+            <nav class="navbar navbar-dark bg-dark navbar-expand-lg p-2">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a id="linkTodos" class="nav-link">Ver todos los productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="linkGpu" class="nav-link">Placas de video</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="linkCpu" class="nav-link">Procesadores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="linkPerifericos" class="nav-link">Periféricos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a id="linkRam" class="nav-link">Memoria RAM</a>
+                            </li>
+                        </ul>
+                        <button id="botonCarrito" type="button" class="btn btn-danger ms-auto" data-bs-toggle="modal" data-bs-target="#modalCarrito"></i>
+                            🛒
+                            Carrito
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-    <header class="encabezado">
-        <h1>PC LUX</h1>
-        <h2>Hardware al alcance de tu mano</h2>
-    </header>
 
-
-        <!-- Array de artículos donde se van a mostrar todos los articulos disponibles para la compra -->
-        <div id="contenedor" class="row">
+        <!-- ARRAY DONDE SE MUESTRAN TODOS LOS PRODUCTOS -->
+        <div id="contenedorProductos" class="row">
         </div>
+    </div>
 
-      
+    <!-- CARRITO MODAL DONDE SE VEN LOS PRODUCTOS AGREGADOS -->
+    <div class="modal modal-lg" id="modalCarrito" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content dark">
+            <div class="modal-header dark">
+              <h5 class="modal-title">Productos seleccionados</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="modalProductosCarrito" class="modal-body">
+                    <h2>Productos seleccionados</h2>
+                    <h3 id="modalTotalCarrito"></h3>
+            </div>
+            <div class="modal-footer">
+              <button id="botonVaciar" type="button" class="btn btn-danger">Vaciar carrito</button>
+              <button id="botonComprar" type="button" class="btn btn-success">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
 
-     <!-- SCRIPT BOOTSTRAP -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-  crossorigin="anonymous"></script>
+
+    <!-- SCRIPT SWEETALERT 2 -->
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- SCRIPT BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
     <!-- JS -->
     <script src="main.js"></script>
 </body>
+
 </html>
