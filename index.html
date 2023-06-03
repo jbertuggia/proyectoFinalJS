@@ -50,7 +50,16 @@
                                 <a id="linkRam" class="nav-link">Memoria RAM</a>
                             </li>
                         </ul>
-                        <button id="botonCarrito" type="button" class="btn btn-danger ms-auto" data-bs-toggle="modal" data-bs-target="#modalCarrito"></i>
+                        <div class="dropdown-center ms-auto">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Cotización Dolar
+                            </button>
+                            <ul id="fetchDolar" class="dropdown-menu dark">
+                          
+                            </ul>
+                          </div>
+                        <button id="botonCarrito" type="button" class="btn btn-danger ms-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalCarrito"></i>
                             🛒
                             Carrito
                         </button>
@@ -68,22 +77,22 @@
     <!-- CARRITO MODAL DONDE SE VEN LOS PRODUCTOS AGREGADOS -->
     <div class="modal modal-lg" id="modalCarrito" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content dark">
-            <div class="modal-header dark">
-              <h5 class="modal-title">Productos seleccionados</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div id="modalProductosCarrito" class="modal-body">
+            <div class="modal-content dark">
+                <div class="modal-header dark">
+                    <h5 class="modal-title">Productos seleccionados</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="modalProductosCarrito" class="modal-body">
                     <h2>Productos seleccionados</h2>
                     <h3 id="modalTotalCarrito"></h3>
+                </div>
+                <div class="modal-footer">
+                    <button id="botonVaciar" type="button" class="btn btn-danger">Vaciar carrito</button>
+                    <button id="botonComprar" type="button" class="btn btn-success">Comprar</button>
+                </div>
             </div>
-            <div class="modal-footer">
-              <button id="botonVaciar" type="button" class="btn btn-danger">Vaciar carrito</button>
-              <button id="botonComprar" type="button" class="btn btn-success">Comprar</button>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 
 
 

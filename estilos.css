@@ -49,7 +49,7 @@ body {
 }
 
 
-/* Modal oscuro */
+/* Modo oscuro */
 .dark {
     background-color: #343a40;
     color: white;
@@ -73,3 +73,12 @@ body {
 .nav-link {
     cursor: pointer;
 }
+
+/* div fetchDolar */
+.fetchDolar a{
+   color: white;
+}
+
+body {
+    overflow-x: hidden;
+  }
