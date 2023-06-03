@@ -1,6 +1,6 @@
 /* PC LUX, TIENDA DE HARDWARE Y PERIFÉRICOS DE PC */
 
-//Creo la clase "Articulo", la voy a usar como plantilla para crear los objetos (artículos):
+//Creo la clase "Articulo", la voy a usar como plantilla para crear los objetos (artículos):-------------------------------------
 
 class Producto {
     constructor(id, tipo, nombre, descripcion, precio, imagen) {
@@ -34,7 +34,6 @@ const mouseHyperx = new Producto(14, "perifericos", "Mouse HyperX", "Pulsfaire R
 const videoNvidia2 = new Producto(15, "gpu", "Placa de video Nvidia", "Zotac 3080 ti", 1329, "img/zotac3080.jpg");
 const videoAmd2 = new Producto(16, "gpu", "Placa de video AMD", "MSI 6800 XT",639, "img/radeon6800.jpg");
 
-
 //Creo un array que va a contener todos los objetos:
 
 const arrayProductos = [cpuAmd5, cpuAmd7, cpuIntel, cpuIntel7, ram16, ram32, ramPro16, videoAmd, videoAmd2, videoNvidia, videoNvidia2, teclado, tecladoHyperx, mouse, mouseHyperx, headset];
@@ -42,11 +41,6 @@ const arrayProductos = [cpuAmd5, cpuAmd7, cpuIntel, cpuIntel7, ram16, ram32, ram
 //Creo el array carrito (inicia vacío):
 
 let arrayCarrito = JSON.parse(localStorage.getItem("arrayCarrito")) || [];
-
-/* //Cargamos el local Storage:
-if (localStorage.getItem(carritoStorage)) {
-    carritoStorage = JSON.parse (localStorage.getItem("carritoStorage"));
-} */
 
 //MOSTRAR LOS PRODUCTOS-------------------------------------------------------------------------------------------------------
 //Primero enlazo el array de prodcutos donde se van a mostrar en el HTML con js.
